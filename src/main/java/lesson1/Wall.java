@@ -3,9 +3,11 @@ package lesson1;
 public class Wall implements Obstacles{
 
     public int height;
+    public String name;
 
-    protected Wall(int height){
+    protected Wall(String name, int height){
         this.height = height;
+        this.name = name;
     }
 
     @Override
@@ -14,5 +16,10 @@ public class Wall implements Obstacles{
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
     }
 }

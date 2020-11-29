@@ -6,6 +6,12 @@ public class Human implements Actions {
     private int jump;
     private String name;
 
+    protected Human (String name, int run, int jump){
+        this.name = name;
+        this.run = run;
+        this.jump = jump;
+    }
+
     @Override
     public int getJump() {
         return jump;
@@ -13,16 +19,11 @@ public class Human implements Actions {
 
     @Override
     public int getRun() {
-        return 0;
-    }
-
-    protected Human (String name, int run, int jump){
-        this.name = name;
-        this.run = run;
-        this.jump = jump;
+        return run;
     }
 
     public String getName() {
         return "Человек по имени " + name;
     }
+
 }

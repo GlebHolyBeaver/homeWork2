@@ -2,31 +2,28 @@ package lesson1;
 
 public class Cat implements Actions{
 
-    protected Cat (int run, int jump){
-    }
+    private int run;
+    private int jump;
+    private String name;
 
-    public float jump(Wall wallNumber) {
-        System.out.println("Кот подпрыгнул");
-        return 0;
-    }
-
-    public int run() {
-        System.out.println("Кот пробежал");
-        return 0;
+    protected Cat (String name, int run, int jump){
+        this.name = name;
+        this.run = run;
+        this.jump = jump;
     }
 
     @Override
     public String getName() {
-        return null;
+        return "Кот по кличке " + name;
     }
 
     @Override
     public int getJump() {
-        return 0;
+        return jump;
     }
 
     @Override
     public int getRun() {
-        return 0;
+        return run;
     }
 }
